@@ -1,0 +1,102 @@
+/*
+Theme name: Skygames
+Version: 1.0
+Description: Sitio para catálogo virtual de videojuegos.
+Author: José Moreno
+Author URI: https://github.com/JoeySolen
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+*/
+
+a,h1,h2,h3,h4,li,p,span,ul{
+    font-family:Montserrat
+}
+
+.attachment-large{
+    max-width:100%;
+    height:auto!important
+}
+
+h1{
+    margin:10px 0;
+    font-weight: 900;
+    color: #495057;
+}
+
+ul{
+    margin-bottom: 0px;
+}
+
+header{
+    background: linear-gradient(0deg, rgba(138,2,43,1) 0%, rgba(255,255,255,1) 2%);
+    padding: 10px 0;
+	box-shadow: 0 5px 10px rgba(204,204,204,0.31);
+    /* position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10; */
+}
+
+header nav li{
+    list-style:none;
+    display:inline-block;
+    padding:0 15px
+}
+
+header nav li a{
+    color:#8A022B;
+    text-transform:uppercase
+}
+
+header nav li a:hover{
+    color:#495057;
+}
+
+.wp-image-53{
+    border-radius: 0px 0px 20px 20px;
+}
+
+img.attachment-large{
+border-radius: 10px !important;
+}
+
+.shadows{
+    transition: box-shadow .3s;
+    border-radius:9px;
+}
+
+.shadows:hover{
+    box-shadow: 0 0 11px rgba(35,35,35,.8);  
+}
+
+.thumbnails{
+    list-style-type: none;
+}
+
+/* .masonry{
+    background-color: #8A022B;
+} */
+
+footer{
+    background-color:#8A022B;
+    padding:10px 0
+}
+
+footer{
+    color:white
+}
+
+footer p{margin:0;color:#fff}
+
+.lista-productos h2{
+    font-weight:900;
+}
+
+.lista-productos h4{
+    font-weight:400;
+}
+
+.lista-productos h4 a{
+    color:#000
+}
