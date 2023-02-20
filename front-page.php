@@ -31,11 +31,11 @@
                         ?>
 
                         <ul class="col-4 thumbnails">
-                            <li class="shadows">
-                                <?php the_post_thumbnail('large'); ?>
-                            </li>
                             <h4 class='my-3 text-center'>
                                 <a href="<?php the_permalink(); ?>">
+                                    <li class="shadows">
+                                        <?php the_post_thumbnail('large'); ?>
+                                    </li>
                                     <?php the_title(); ?>
                                 </a>
                             </h4>
