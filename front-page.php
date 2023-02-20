@@ -41,10 +41,10 @@
                             </h4>
                         </ul>
                     <?php }
-                }
-            ?>
+                    }
+                ?>
+            </div>
         </div>
-    </div>
     </main>
 
 <?php get_footer();?>
