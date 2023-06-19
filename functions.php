@@ -46,7 +46,7 @@
 
     add_action('widgets_init', 'sidebar');
 
-    function productos_type(){
+    function productos_type(){ //Con esta función, es posible crear nuevos Custom Post Type, o entradas personalizadas, asociadas en este caso a productos de la tienda.
 
         $labels =array(
             'name' => 'Productos',
@@ -79,6 +79,20 @@
         }
         
         add_action( 'wp_enqueue_scripts', 'bps_masonry' );
+        
 
+    add_action('init', 'pgRegisterTax');
+    function pgRegisterTax() { //Con esta función, es posible registrar nuevas taonomías que pueden ser asociadas a los productos y de este modo organizarlos y filtrarlos con facilidad.    
+        $args = array(
+            'hierarchical' => true, //permite crear subcategorías
+            'labels' => array(
+                'name' => 'Categorías de productos',
+                'singular_name' => 'Categoría de productos',
+            ),
+            'show_in_nav_menu' => true,
+            'show_admin_column' => true,
+            'rewrite' => array('slug' => 'categoria-productos')
+        );
+        register_taxonomy('categoria-productos', array('producto'), $args);
+    }
 ?>
-

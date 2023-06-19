@@ -4,6 +4,7 @@
         <?php if(have_posts()){
             while(have_posts()){
                 the_post();
+                $taxonomy = get_the_terms(get_the_ID(), 'categoria-productos');
             ?>
                 <h1 class='my-5'><?php the_title() ?></h1>
                 <div class="row">
@@ -11,6 +12,9 @@
                         <?php the_post_thumbnail('large'); ?>
                     </div>
                     <div class="col-8">
+                        <?php echo do_shortcode('[contact-form-7 id="97" title="Formulario de contacto 1"]') ?>
+                    </div>
+                    <div class="col-12">
                         <?php the_content(); ?>
                     </div>
                 </div>
@@ -21,6 +25,13 @@
                     'posts_per_page' => 3,
                     'order' => 'ASC',
                     'orderby' => 'title',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'categoria-productos',
+                            'field' => 'slug',
+                            'terms' => $taxonomy[0] -> slug
+                        )
+                    ),
                     'post__not_in'  => array($ID_producto_actual) //Con esta función evito que el loop me llame el producto actual, descartándolo del array de argumentos.
                 );
                 $productos = new WP_Query($args);?>
